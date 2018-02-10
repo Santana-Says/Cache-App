@@ -81,20 +81,19 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vCK-Zc-643">
-                                        <rect key="frame" x="124" y="75.5" width="127" height="120"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vCK-Zc-643">
+                                        <rect key="frame" x="125.5" y="72" width="124" height="127"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgW-02-1yc">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="82"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="82"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lcd-0D-GUA">
-                                                <rect key="frame" x="42" y="0.0" width="85" height="120"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="60" translatesAutoresizingMaskIntoConstraints="NO" id="lcd-0D-GUA">
+                                                <rect key="frame" x="40.5" y="0.0" width="83.5" height="127"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="EBK-IO-jJB"/>
-                                                    <constraint firstAttribute="width" constant="85" id="TIi-az-knB"/>
+                                                    <constraint firstAttribute="height" constant="127" id="EBK-IO-jJB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="150"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,7 +101,7 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="LgW-02-1yc" firstAttribute="width" secondItem="lcd-0D-GUA" secondAttribute="height" multiplier="7:20" id="4MR-9h-0Z8"/>
+                                            <constraint firstItem="LgW-02-1yc" firstAttribute="width" secondItem="lcd-0D-GUA" secondAttribute="height" multiplier="13:40" id="15H-DQ-wHk"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xwC-F7-uDP">
@@ -281,6 +280,9 @@
                                         <state key="normal" title="Request">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="requestBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ke-iF-ItF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5y-Sz-YOP" customClass="DesignableButton" customModule="Cache" customModuleProvider="target">
                                         <rect key="frame" x="168.5" y="0.0" width="166.5" height="65"/>
@@ -289,6 +291,9 @@
                                         <state key="normal" title="Pay">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="payBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmL-Dk-qcU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.094117647060000004" green="0.74509803919999995" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -320,6 +325,7 @@
                     </view>
                     <connections>
                         <outlet property="cashLbl" destination="lcd-0D-GUA" id="HJU-8H-PKN"/>
+                        <outlet property="dollarLbl" destination="LgW-02-1yc" id="B5W-xu-MAa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
