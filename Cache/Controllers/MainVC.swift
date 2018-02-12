@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 	
 	//MARK: - IBOutlets
 	@IBOutlet weak var dollarLbl: UILabel!

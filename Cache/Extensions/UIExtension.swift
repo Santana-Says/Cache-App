@@ -20,6 +20,10 @@ class DesignableButton: UIButton {
 class DesignableLabel: UILabel {
 }
 
+@IBDesignable
+class DesignableIamgeView: UIImageView {
+}
+
 extension UIView {
 	@IBInspectable
 	var cornerRadius: CGFloat {
