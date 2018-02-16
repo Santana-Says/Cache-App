@@ -74,10 +74,8 @@ class MainVC: UIViewController {
 		cashLbl.text = showAmount(tag: amountString)
 	}
 	
-	@IBAction func requestBtnPressed(_ sender: Any) {
-	}
-	
-	@IBAction func payBtnPressed(_ sender: Any) {
+	@IBAction func processBtnPressed(_ sender: Any) {
+		//link to 
 	}
 	
 }
