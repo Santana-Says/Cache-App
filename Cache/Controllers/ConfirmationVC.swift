@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComfirmationVC: UIViewController {
+class ConfirmationVC: UIViewController {
 	
 	//MARK: - IBOutlets
 	
@@ -16,18 +16,20 @@ class ComfirmationVC: UIViewController {
 	@IBOutlet weak var toLbl: UITextField!
 	@IBOutlet weak var forLabel: UITextField!
 	
+	var passAmount: String!
+	
 	//MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cashAmountLbl.text = "$\(passAmount!)"
     }
 	
 	//MARK: - IBActions
 	
 	@IBAction func cancelBtnPressed(_ sender: Any) {
-		dismiss(animated: true, completion: nil)
+		navigationController?.popViewController(animated: true)
 	}
 	
 	@IBAction func processBtnPressed(_ sender: Any) {

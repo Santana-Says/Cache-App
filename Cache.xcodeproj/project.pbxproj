@@ -17,7 +17,7 @@
 		B55ADC162031104500092F4D /* ActivityCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADC152031104500092F4D /* ActivityCollectionCell.swift */; };
 		B55ADC182031107C00092F4D /* ActivityTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADC172031107C00092F4D /* ActivityTableCell.swift */; };
 		B55ADC1A203111B800092F4D /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADC19203111B800092F4D /* ActivityVC.swift */; };
-		B55ADC1C2036B1C600092F4D /* ComfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADC1B2036B1C600092F4D /* ComfirmationVC.swift */; };
+		B55ADC1C2036B1C600092F4D /* ConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADC1B2036B1C600092F4D /* ConfirmationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		B55ADC152031104500092F4D /* ActivityCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionCell.swift; sourceTree = "<group>"; };
 		B55ADC172031107C00092F4D /* ActivityTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableCell.swift; sourceTree = "<group>"; };
 		B55ADC19203111B800092F4D /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
-		B55ADC1B2036B1C600092F4D /* ComfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComfirmationVC.swift; sourceTree = "<group>"; };
+		B55ADC1B2036B1C600092F4D /* ConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 			children = (
 				B55ADBED202F59E600092F4D /* MainVC.swift */,
 				B55ADC19203111B800092F4D /* ActivityVC.swift */,
-				B55ADC1B2036B1C600092F4D /* ComfirmationVC.swift */,
+				B55ADC1B2036B1C600092F4D /* ConfirmationVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 				B55ADC162031104500092F4D /* ActivityCollectionCell.swift in Sources */,
 				B55ADC1A203111B800092F4D /* ActivityVC.swift in Sources */,
 				B55ADC182031107C00092F4D /* ActivityTableCell.swift in Sources */,
-				B55ADC1C2036B1C600092F4D /* ComfirmationVC.swift in Sources */,
+				B55ADC1C2036B1C600092F4D /* ConfirmationVC.swift in Sources */,
 				B55ADBEC202F59E600092F4D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

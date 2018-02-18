@@ -43,12 +43,20 @@ class MainVC: UIViewController {
 		currencyFormatter.groupingSeparator = ","
 		currencyFormatter.numberStyle = .decimal
 		
-		if Int(amount) < MAX_AMOUNT && amountString.count <= MAX_COUNT {
+		if amount.intValue <= MAX_AMOUNT && amountString.count <= MAX_COUNT {
 			return currencyFormatter.string(from: amount)!
 		} else {
 			amountString.removeLast(1)
 			amount = NSNumber(value: Float(amountString)!)
 			return currencyFormatter.string(from: amount)!
+		}
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ConfirmationVC" {
+			if let confirmationVC = segue.destination as? ConfirmationVC {
+				confirmationVC.cashAmountLbl.text = amountString
+			}
 		}
 	}
 	
@@ -75,7 +83,11 @@ class MainVC: UIViewController {
 	}
 	
 	@IBAction func processBtnPressed(_ sender: Any) {
-		//link to 
+		if !amountString.isEmpty {
+			let confirmationVC = storyboard?.instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationVC
+			confirmationVC.passAmount = showAmount(tag: amountString)
+			navigationController?.pushViewController(confirmationVC, animated: true)
+		}
 	}
 	
 }
