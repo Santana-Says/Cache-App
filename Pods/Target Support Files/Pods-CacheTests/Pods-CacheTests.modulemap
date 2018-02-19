@@ -1,0 +1,6 @@
+framework module Pods_CacheTests {
+  umbrella header "Pods-CacheTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
