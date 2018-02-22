@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7E1A74882A0C355DBECE16B4480209B4'
-               BlueprintName = 'Pods-Cache'
+               BlueprintIdentifier = '8C5BD10883BD185426DD737247F56DEC'
+               BlueprintName = 'PhoneNumberKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Cache.framework'>
+               BuildableName = 'PhoneNumberKit.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

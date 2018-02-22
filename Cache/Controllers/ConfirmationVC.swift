@@ -15,8 +15,13 @@ class ConfirmationVC: UIViewController {
 	@IBOutlet weak var cashAmountLbl: UILabel!
 	@IBOutlet weak var toLbl: UITextField!
 	@IBOutlet weak var forLabel: UITextField!
+	@IBOutlet weak var tableView: UITableView!
+	
+	let SECTION_HEADER_HEIGHT: CGFloat = 25
+	var data = [TableSection: [[String: String]]]()
 	
 	var passAmount: String!
+	//var confirmationType
 	
 	//MARK: - Life Cycle
 
@@ -33,5 +38,19 @@ class ConfirmationVC: UIViewController {
 	}
 	
 	@IBAction func processBtnPressed(_ sender: Any) {
+	}
+}
+
+extension ConfirmationVC: UITableViewDelegate, UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		if let tableSection = TableSection(rawValue: section), let contactData = data[tableSection] {
+			return contactData.count
+		}
+		return 0
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
 	}
 }

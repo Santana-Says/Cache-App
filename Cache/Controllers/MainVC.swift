@@ -64,9 +64,6 @@ class MainVC: UIViewController {
 	@IBAction func profileBtnPressed(_ sender: Any) {
 	}
 	
-	@IBAction func historyBtnPressed(_ sender: Any) {
-	}
-	
 	@IBAction func cashInputBtnPressed(_ sender: UIButton) {
 		if sender.tag < DECIMAL_TAG {
 			amountString.append("\(sender.tag)")
@@ -86,6 +83,7 @@ class MainVC: UIViewController {
 		if !amountString.isEmpty {
 			let confirmationVC = storyboard?.instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationVC
 			confirmationVC.passAmount = showAmount(tag: amountString)
+			//TODO: - create an enum for pay/ request to pass along
 			navigationController?.pushViewController(confirmationVC, animated: true)
 		}
 	}

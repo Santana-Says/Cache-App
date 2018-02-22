@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/santana/Desktop/iOS Projects/Just Me/Cache/Cache/Helpers/Enums.swift">
+   </FileRef>
+   <FileRef
       location = "group:Cache.xcodeproj">
    </FileRef>
    <FileRef
