@@ -35,7 +35,7 @@ extension ActivityVC: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableCell") as? ActivityTableCell else { return UITableViewCell() }
-		cell.configCell(image: UIImage.init(named: "logo")!, name: "Dev", description: "NippleandToes23 came to dinner", amount: 47)
+		cell.configCell(image: UIImage.init(named: "logo")!, name: "Yo Momma", description: "😜🍌🍆🍌🍆", amount: 75)
 		
 		return cell
 	}
