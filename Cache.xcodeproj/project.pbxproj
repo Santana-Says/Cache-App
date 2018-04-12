@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		084C7C738A13A4E41A82413B /* Pods_CacheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5B9E18C2ACA16E85D82256 /* Pods_CacheTests.framework */; };
 		677D3DE1FE68ADADCF286A91 /* Pods_Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8054C9E8CFBD35EEE295435 /* Pods_Cache.framework */; };
+		B50EBAE7204231B60049DC3F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBAE6204231B60049DC3F /* DataService.swift */; };
+		B50EBB0F2058E4EE0049DC3F /* TransferDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBB0E2058E4EE0049DC3F /* TransferDetails.swift */; };
+		B50EBB112058FA2E0049DC3F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBB102058FA2E0049DC3F /* AuthService.swift */; };
+		B50EBB13205906780049DC3F /* CashtagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBB12205906780049DC3F /* CashtagVC.swift */; };
+		B50EBB15205A0C9C0049DC3F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBB14205A0C9C0049DC3F /* UIViewExtension.swift */; };
 		B55ADBEC202F59E600092F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADBEB202F59E600092F4D /* AppDelegate.swift */; };
 		B55ADBEE202F59E600092F4D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADBED202F59E600092F4D /* MainVC.swift */; };
 		B55ADBF1202F59E600092F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55ADBEF202F59E600092F4D /* Main.storyboard */; };
@@ -42,6 +47,11 @@
 		3D5DE753E6B30225389F11E9 /* Pods-CacheTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacheTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CacheTests/Pods-CacheTests.debug.xcconfig"; sourceTree = "<group>"; };
 		505FB3ED16C6D848ABFF0C6F /* Pods-CacheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CacheTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CacheTests/Pods-CacheTests.release.xcconfig"; sourceTree = "<group>"; };
 		51800B35B8762DADD462360D /* Pods-Cache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cache/Pods-Cache.debug.xcconfig"; sourceTree = "<group>"; };
+		B50EBAE6204231B60049DC3F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B50EBB0E2058E4EE0049DC3F /* TransferDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetails.swift; sourceTree = "<group>"; };
+		B50EBB102058FA2E0049DC3F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B50EBB12205906780049DC3F /* CashtagVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashtagVC.swift; sourceTree = "<group>"; };
+		B50EBB14205A0C9C0049DC3F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B55ADBE8202F59E600092F4D /* Cache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55ADBEB202F59E600092F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B55ADBED202F59E600092F4D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -104,6 +114,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B50EBAE52042318A0049DC3F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B50EBAE6204231B60049DC3F /* DataService.swift */,
+				B50EBB102058FA2E0049DC3F /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B55ADBDF202F59E600092F4D = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +150,7 @@
 				B55ADC1020310F1F00092F4D /* Models */,
 				B55ADC0F20310F1200092F4D /* Views */,
 				B55ADC0E20310F0000092F4D /* Controllers */,
+				B50EBAE52042318A0049DC3F /* Services */,
 				B55ADC0B202F77FF00092F4D /* Helpers */,
 				B55ADBEB202F59E600092F4D /* AppDelegate.swift */,
 				B55ADBEF202F59E600092F4D /* Main.storyboard */,
@@ -156,6 +176,7 @@
 			children = (
 				B5F53281203E9E8E00A147AE /* Enums.swift */,
 				B55ADC0C202F782B00092F4D /* UIExtension.swift */,
+				B50EBB14205A0C9C0049DC3F /* UIViewExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -167,6 +188,7 @@
 				B55ADC19203111B800092F4D /* ActivityVC.swift */,
 				B55ADC1B2036B1C600092F4D /* ConfirmationVC.swift */,
 				B55ADC21203A84C700092F4D /* LoginVC.swift */,
+				B50EBB12205906780049DC3F /* CashtagVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +205,7 @@
 			children = (
 				B55ADC152031104500092F4D /* ActivityCollectionCell.swift */,
 				B55ADC172031107C00092F4D /* ActivityTableCell.swift */,
+				B50EBB0E2058E4EE0049DC3F /* TransferDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,7 +261,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jefffrey Santana";
 				TargetAttributes = {
 					B55ADBE7202F59E600092F4D = {
@@ -308,9 +331,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cache/Pods-Cache-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -327,6 +355,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -334,6 +363,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,9 +413,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CacheTests/Pods-CacheTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -402,6 +437,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -409,6 +445,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,13 +461,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55ADBEE202F59E600092F4D /* MainVC.swift in Sources */,
+				B50EBAE7204231B60049DC3F /* DataService.swift in Sources */,
 				B55ADC0D202F782B00092F4D /* UIExtension.swift in Sources */,
+				B50EBB112058FA2E0049DC3F /* AuthService.swift in Sources */,
+				B50EBB15205A0C9C0049DC3F /* UIViewExtension.swift in Sources */,
 				B55ADC22203A84C700092F4D /* LoginVC.swift in Sources */,
 				B55ADC162031104500092F4D /* ActivityCollectionCell.swift in Sources */,
 				B55ADC1A203111B800092F4D /* ActivityVC.swift in Sources */,
 				B55ADC182031107C00092F4D /* ActivityTableCell.swift in Sources */,
+				B50EBB0F2058E4EE0049DC3F /* TransferDetails.swift in Sources */,
 				B55ADC1C2036B1C600092F4D /* ConfirmationVC.swift in Sources */,
 				B5F53282203E9E8E00A147AE /* Enums.swift in Sources */,
+				B50EBB13205906780049DC3F /* CashtagVC.swift in Sources */,
 				B55ADBEC202F59E600092F4D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +529,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -494,6 +537,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -544,6 +588,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -551,6 +596,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

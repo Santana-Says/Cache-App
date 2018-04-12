@@ -9,13 +9,17 @@ target 'Cache' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-    pod 'PhoneNumberKit'
+  pod 'PhoneNumberKit'
+  pod 'Firebase/Database'
+  pod 'FirebaseUI/Phone'
 
   target 'CacheTests' do
     inherit! :search_paths
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'PhoneNumberKit'
+    pod 'Firebase/Database'
+    pod 'FirebaseUI/Phone'
   end
 
 end

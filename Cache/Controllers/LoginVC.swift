@@ -17,6 +17,8 @@ class LoginVC: UIViewController {
 	@IBOutlet weak var welcomeLbl: UILabel!
 	@IBOutlet weak var introLbl: UILabel!
 	@IBOutlet weak var phoneTextField: PhoneNumberTextField!
+	@IBOutlet weak var nextBtn: UIButton!
+	@IBOutlet weak var numberStackView: UIStackView!
 	
 	private var phoneNumberKit = PhoneNumberKit()
 	private var textFieldString = ""
@@ -28,7 +30,8 @@ class LoginVC: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nextBtn.bindToKeyboard()
+		hideKeyboardWhenTappedAround()
     }
 	
 	//MARK: - IBActions
@@ -45,6 +48,9 @@ class LoginVC: UIViewController {
 	
 	@IBAction func emailBtnPressed(_ sender: Any) {
 		//bring up next button along with keyboard, hiding the numberpad
+		phoneTextField.isEnabled = true
+		numberStackView.isHidden = true
+		phoneTextField.becomeFirstResponder()
 	}
 	
 	@IBAction func backspaceBtnPressed(_ sender: Any) {
@@ -96,8 +102,24 @@ class LoginVC: UIViewController {
 				return
 			}
 			
+			guard let user = user else {return}
+			
+			let userData = ["name": user.displayName, "email": user.email, "phone": user.phoneNumber]
+			DataService.instance.createDBUser(uid: user.uid, userData: userData)
+			
 			let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
 			self.navigationController?.pushViewController(mainVC, animated: true)
 		}
+	}
+	
+	func hideKeyboardWhenTappedAround() {
+		let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+		tap.cancelsTouchesInView = false
+		view.addGestureRecognizer(tap)
+	}
+	
+	@objc func dismissKeyboard() {
+		view.endEditing(true)
+		numberStackView.isHidden = false
 	}
 }
