@@ -70,11 +70,11 @@ class MainVC: UIViewController {
 		} else if sender.tag == DECIMAL_TAG {
 			amountString.append(".")
 		} else {
-			amountString.removeLast(1)
 			guard !amountString.isEmpty else {
 				cashLbl.text = "0"
 				return
 			}
+			amountString.removeLast(1)
 		}
 		cashLbl.text = showAmount(tag: amountString)
 	}
@@ -83,6 +83,7 @@ class MainVC: UIViewController {
 		if !amountString.isEmpty {
 			let confirmationVC = storyboard?.instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationVC
 			confirmationVC.passAmount = showAmount(tag: amountString)
+			
 			//TODO: - create an enum for pay/ request to pass along
 			navigationController?.pushViewController(confirmationVC, animated: true)
 		}

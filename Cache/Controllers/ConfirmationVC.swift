@@ -38,13 +38,15 @@ class ConfirmationVC: UIViewController {
 	
 	@IBAction func payBtnPressed(_ sender: Any) {
 		guard let sendTo = toLbl.text else {return}
-		let comment = forLabel.text ?? ""
+		let desc = forLabel.text ?? ""
 		let fromUser = AuthService.instance.getCurrentUser().uid
 		let timestamp = getTimestamp()
-		
-//		DataService.instance.uploadTransfer(amountToSend: passAmount, withComment: comment, fromUID: fromUser, toUID: <#T##String#>, timestamp: timestamp) { (complete) in
-//			
+		let details = TransferDetails(amount: Double(passAmount)!, description: desc, senderId: fromUser, receiverId: sendTo, timestamp: timestamp)
+//		DataService.instance.uploadTransfer(amountToSend: Double(passAmount)!, withComment: comment, fromUID: fromUser, toUID: "Vsn74017fWgRkB9QRDXGjgBuYSD2", timestamp: timestamp) { (complete) in
+//			self.performSegue(withIdentifier: "ConfirmationVCToActivityVC", sender: self)
 //		}
+		DataCloudService.instance.createTransfer(transfer: details)
+		performSegue(withIdentifier: "ConfirmationVCToActivityVC", sender: self)
 	}
 	
 	//MARK: - Helper Methods
@@ -54,7 +56,7 @@ class ConfirmationVC: UIViewController {
 		let formatter = DateFormatter()
 		
 		formatter.timeZone = TimeZone.current
-		formatter.dateFormat = "yyyy-MM-dd HH:mm"
+		formatter.dateFormat = "yyyy-MM-dd hh:mm a"
 		
 		return formatter.string(from: now)
 	}

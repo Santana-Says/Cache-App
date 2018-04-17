@@ -968,7 +968,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="p6c-AX-N0k">
-                                <rect key="frame" x="20" y="30" width="374" height="30"/>
+                                <rect key="frame" x="20" y="40" width="374" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8A-Dq-M3G">
                                         <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
@@ -978,7 +978,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <action selector="backBtnPressed:" destination="ycz-BB-tj1" eventType="touchUpInside" id="8Fm-zG-QJ9"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="nF6-9p-gDM"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-aj-NkG">
@@ -1001,14 +1001,14 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26i-He-hw1">
-                                <rect key="frame" x="0.0" y="210" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="220" width="414" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="0.30182470034246578" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QgY-hr-cW7"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nss-d6-2UD">
-                                <rect key="frame" x="0.0" y="60" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="70" width="414" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Rwx-fJ-ADP"/>
@@ -1069,7 +1069,7 @@
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QQg-pI-gQ6">
-                                <rect key="frame" x="0.0" y="250" width="414" height="486"/>
+                                <rect key="frame" x="0.0" y="260" width="414" height="476"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1159,7 +1159,7 @@
                         <constraints>
                             <constraint firstItem="hHs-Nm-CrI" firstAttribute="trailing" secondItem="Nss-d6-2UD" secondAttribute="trailing" id="5Bo-Wb-DhC"/>
                             <constraint firstItem="QQg-pI-gQ6" firstAttribute="bottom" secondItem="hHs-Nm-CrI" secondAttribute="bottom" id="7Ff-fa-Aww"/>
-                            <constraint firstItem="p6c-AX-N0k" firstAttribute="top" secondItem="hHs-Nm-CrI" secondAttribute="top" constant="10" id="80l-Zg-72p"/>
+                            <constraint firstItem="p6c-AX-N0k" firstAttribute="top" secondItem="hHs-Nm-CrI" secondAttribute="top" constant="20" id="80l-Zg-72p"/>
                             <constraint firstItem="QQg-pI-gQ6" firstAttribute="top" secondItem="26i-He-hw1" secondAttribute="bottom" id="KIz-8X-Glz"/>
                             <constraint firstItem="QQg-pI-gQ6" firstAttribute="trailing" secondItem="hHs-Nm-CrI" secondAttribute="trailing" id="LWJ-FR-4bJ"/>
                             <constraint firstItem="QQg-pI-gQ6" firstAttribute="leading" secondItem="hHs-Nm-CrI" secondAttribute="leading" id="REb-3n-muo"/>
@@ -1227,4 +1227,7 @@
         <image name="history" width="56" height="48"/>
         <image name="search" width="31" height="31"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nF6-9p-gDM"/>
+    </inferredMetricsTieBreakers>
 </document>

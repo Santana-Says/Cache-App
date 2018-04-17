@@ -14,6 +14,9 @@ class ActivityVC: UIViewController {
 	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var tableView: UITableView!
 	
+	var myTransfers = [TransferDetails]()
+	var myRecentContacts = [TransferDetails]()
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -21,21 +24,37 @@ class ActivityVC: UIViewController {
 		tableView.dataSource = self
 		collectionView.delegate = self
 		collectionView.dataSource = self
+		
+		load()
     }
-
-	@IBAction func backBtnPressed(_ sender: Any) {
-		navigationController?.popViewController(animated: true)
+	
+	//TODO: - add data to proper models
+	func load() {
+//		DataService.instance.getAllUserTransfers(for: AuthService.instance.getCurrentUser().uid) { (transfers) in
+//			self.myTransfers = transfers
+//		}
+//
+//		DataService.instance.getAllUserTransfers(for: nil) { (contacts) in
+//			self.myRecentContacts = contacts
+//		}
+		DataCloudService.instance.getTransfers(withUserId: "l") { (transfers) in
+			self.myTransfers = transfers
+		}
 	}
 }
 
 extension ActivityVC: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 3
+		return myTransfers.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableCell") as? ActivityTableCell else { return UITableViewCell() }
-		cell.configCell(image: UIImage.init(named: "logo")!, name: "Yo Momma", description: "😜🍌🍆🍌🍆", amount: 75)
+		cell.configCell(
+			image: UIImage.init(named: "logo")!,
+			name: myTransfers[indexPath.row].senderId,
+			description: myTransfers[indexPath.row].description,
+			amount: myTransfers[indexPath.row].amount)
 		
 		return cell
 	}
@@ -43,12 +62,12 @@ extension ActivityVC: UITableViewDelegate, UITableViewDataSource {
 
 extension ActivityVC: UICollectionViewDelegate, UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 7
+		return myRecentContacts.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCollectionCell", for: indexPath) as? ActivityCollectionCell else { return UICollectionViewCell() }
-		cell.configCell(image: UIImage.init(named: "logo")!, name: "Dev")
+		cell.configCell(image: UIImage.init(named: "logo")!, name: myTransfers[indexPath.row].senderId)
 		
 		return cell
 	}

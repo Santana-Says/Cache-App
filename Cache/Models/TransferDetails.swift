@@ -8,8 +8,10 @@
 
 import Foundation
 
-struct TransferDetails {
-	private(set) var tagName: String
-	private(set) var amount: String
-	private(set) var description: String
+struct TransferDetails: Codable {
+	private(set) var amount: 		Double
+	private(set) var description: 	String
+	private(set) var senderId: 		String
+	private(set) var receiverId:	String
+	private(set) var timestamp:		String
 }

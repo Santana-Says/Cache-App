@@ -94,7 +94,8 @@ class LoginVC: UIViewController {
 	func loginCredentials() {
 		let credential = PhoneAuthProvider.provider().credential(
 			withVerificationID: verificationID,
-			verificationCode: verificationCode)
+			verificationCode: verificationCode
+		)
 		
 		Auth.auth().signIn(with: credential) { (user, error) in
 			if let error = error {
@@ -104,8 +105,10 @@ class LoginVC: UIViewController {
 			
 			guard let user = user else {return}
 			
-			let userData = ["name": user.displayName, "email": user.email, "phone": user.phoneNumber]
-			DataService.instance.createDBUser(uid: user.uid, userData: userData)
+//			let userData = ["name": user.displayName, "email": user.email, "phone": user.phoneNumber]
+			let userData = UserDetails(tagName: "User1", email: "Nips&Toes23@gmail.com", phone: "3053238691")
+//			DataService.instance.createDBUser(uid: user.uid, userData: userData)
+			DataCloudService.instance.createUser(user: userData)
 			
 			let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
 			self.navigationController?.pushViewController(mainVC, animated: true)

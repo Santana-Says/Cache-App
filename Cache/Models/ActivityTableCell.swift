@@ -15,7 +15,7 @@ class ActivityTableCell: UITableViewCell {
 	@IBOutlet weak var descriptionLbl: UILabel!
 	@IBOutlet weak var amountLbl: UILabel!
 	
-	func configCell(image: UIImage, name: String, description: String, amount: Int) {
+	func configCell(image: UIImage, name: String, description: String, amount: Double) {
 		contactImg.image = image
 		nameLbl.text = name
 		descriptionLbl.text = description
