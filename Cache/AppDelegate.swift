@@ -19,9 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		FirebaseApp.configure()
-//		if let verificationID = UserDefaults.standard.string(forKey: "authVerificationID") {
-//			<#code#>
-//		}
+		
+		window = UIWindow(frame: UIScreen.main.bounds)
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		var rootVC: UIViewController!
+		Auth.auth().addStateDidChangeListener { (auth, user) in
+			if user != nil {
+				rootVC = storyboard.instantiateViewController(withIdentifier: "MainNavController")
+				print("A USER IS LOGGED IN")
+			} else {
+				rootVC = storyboard.instantiateViewController(withIdentifier: "LoginNavController")
+				print("USER MUST LOG IN")
+			}
+			
+			self.window?.rootViewController = rootVC
+			self.window?.makeKeyAndVisible()
+		}
 		
 //		UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { (granted, error) in
 //			application.registerForRemoteNotifications()

@@ -10,13 +10,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Cache/Controllers/LoginVC.swift"
-            timestampString = "545639811.7760119"
+            timestampString = "545968157.891167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "sendConfimationCode(phoneNumber:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cache/Services/DataCloudService.swift"
+            timestampString = "545968157.89157"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getTransfers(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cache.DataCloudService.getTransfers(handler: (Swift.Array&lt;Cache.TransferDetails&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Cache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/santana/Desktop/iOS%20Projects/Just%20Me/Cache/Cache/Services/DataCloudService.swift"
+                  timestampString = "545882557.339025"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.QuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Cache.DataCloudService.getTransfers(handler: (Swift.Array&lt;Cache.TransferDetails&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Cache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/santana/Desktop/iOS%20Projects/Just%20Me/Cache/Cache/Services/DataCloudService.swift"
+                  timestampString = "545882557.344998"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

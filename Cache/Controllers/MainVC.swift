@@ -30,8 +30,8 @@ class MainVC: UIViewController {
 		
 	}
 	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		amountString = ""
 	}
 	
@@ -71,7 +71,7 @@ class MainVC: UIViewController {
 			amountString.append(".")
 		} else {
 			guard !amountString.isEmpty else {
-				cashLbl.text = "0"
+				cashLbl.text = "10"
 				return
 			}
 			amountString.removeLast(1)

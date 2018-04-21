@@ -16,6 +16,7 @@
 		B50EBB112058FA2E0049DC3F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBB102058FA2E0049DC3F /* AuthService.swift */; };
 		B50EBB13205906780049DC3F /* CashtagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBB12205906780049DC3F /* CashtagVC.swift */; };
 		B50EBB15205A0C9C0049DC3F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBB14205A0C9C0049DC3F /* UIViewExtension.swift */; };
+		B542001D208ACF1C004F39FD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B542001C208ACF1C004F39FD /* ProfileVC.swift */; };
 		B55ADBEC202F59E600092F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADBEB202F59E600092F4D /* AppDelegate.swift */; };
 		B55ADBEE202F59E600092F4D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ADBED202F59E600092F4D /* MainVC.swift */; };
 		B55ADBF1202F59E600092F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55ADBEF202F59E600092F4D /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		B50EBB102058FA2E0049DC3F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B50EBB12205906780049DC3F /* CashtagVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashtagVC.swift; sourceTree = "<group>"; };
 		B50EBB14205A0C9C0049DC3F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B542001C208ACF1C004F39FD /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		B55ADBE8202F59E600092F4D /* Cache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55ADBEB202F59E600092F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B55ADBED202F59E600092F4D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				B55ADC1B2036B1C600092F4D /* ConfirmationVC.swift */,
 				B55ADC21203A84C700092F4D /* LoginVC.swift */,
 				B50EBB12205906780049DC3F /* CashtagVC.swift */,
+				B542001C208ACF1C004F39FD /* ProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				B50EBB0F2058E4EE0049DC3F /* TransferDetails.swift in Sources */,
 				B55ADC1C2036B1C600092F4D /* ConfirmationVC.swift in Sources */,
 				B50915A020858C2B00F44EE9 /* DataCloudService.swift in Sources */,
+				B542001D208ACF1C004F39FD /* ProfileVC.swift in Sources */,
 				B5F53282203E9E8E00A147AE /* Enums.swift in Sources */,
 				B50EBB13205906780049DC3F /* CashtagVC.swift in Sources */,
 				B55ADBEC202F59E600092F4D /* AppDelegate.swift in Sources */,

@@ -17,21 +17,27 @@ class DataCloudService {
 	private let REF_USERS = db.collection("users")
 	private let REF_TRANSFERS = db.collection("transfers")
 	private var ref: DocumentReference? = nil
+	private let UID = AuthService.instance.getCurrentUser().uid
 	
 	//MARK: - Write Documents
 	
 	func createUser(user: UserDetails) {
-		ref = REF_USERS.addDocument(data: [
+//		ref = REF_USERS.addDocument(data: [
+//			"tagName": 	user.tagName,
+//			"email": 	user.email,
+//			"phone": 	user.phone
+//		]) { err in
+//			if let err = err {
+//				print("Error adding document: \(err)")
+//			} else {
+//				print("Added document ID: \(self.ref?.documentID)")
+//			}
+//		}
+		REF_USERS.document(UID).setData([
 			"tagName": 	user.tagName,
 			"email": 	user.email,
 			"phone": 	user.phone
-		]) { err in
-			if let err = err {
-				print("Error adding document: \(err)")
-			} else {
-				print("Added document ID: \(self.ref?.documentID)")
-			}
-		}
+			])
 	}
 	
 	func createTransfer(transfer: TransferDetails) {
@@ -73,22 +79,24 @@ class DataCloudService {
 		}
 	}
 	
-	func getTransfers(withUserId id: String, handler: @escaping (_ transfers: [TransferDetails]) -> ()) {
+	func getTransfers(handler: @escaping (_ transfers: [TransferDetails]) -> ()) {
 		var allTransfers = [TransferDetails]()
-		REF_TRANSFERS.whereField("sender", isEqualTo: id).getDocuments { (querySnapshot, err) in
+		REF_TRANSFERS.whereField("sender", isEqualTo: UID).getDocuments { (querySnapshot, err) in
 			if let err = err {
 				print("Error getting transfers: \(err)")
 			} else {
 				for doc in querySnapshot!.documents {
-					let data = try? JSONSerialization.data(withJSONObject: doc.data())
-					do {
-						let transfer = try JSONDecoder().decode(TransferDetails.self, from: data!)
-						allTransfers.append(transfer)
-					} catch {
-						print(error)
-					}
+					let transfer = TransferDetails(
+						amount: doc.data()["amount"] as! Double,
+						description: doc.data()["description"] as! String,
+						senderId: doc.data()["sender"] as! String,
+						receiverId: doc.data()["receiver"] as! String,
+						timestamp: ""
+					)
+					allTransfers.append(transfer)
 				}
 			}
+			handler(allTransfers)
 		}
 	}
 }
