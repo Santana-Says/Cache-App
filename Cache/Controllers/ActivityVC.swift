@@ -15,17 +15,16 @@ class ActivityVC: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 	
 	var myTransfers = [TransferDetails]()
-	var myRecentContacts = [TransferDetails]()
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		
+		load()
 		
 		tableView.delegate = self
 		tableView.dataSource = self
 		collectionView.delegate = self
 		collectionView.dataSource = self
-		
-		load()
     }
 	
 	//TODO: - add data to proper models
@@ -37,8 +36,14 @@ class ActivityVC: UIViewController {
 //		DataService.instance.getAllUserTransfers(for: nil) { (contacts) in
 //			self.myRecentContacts = contacts
 //		}
-		DataCloudService.instance.getTransfers(withUserId: "l") { (transfers) in
-			self.myTransfers = transfers
+		DataCloudService.instance.getTransfers { (transfers) in
+			if transfers.count > 0 {
+				self.myTransfers = transfers
+				self.tableView.reloadData()
+				self.collectionView.reloadData()
+			} else {
+				print("STILL NO TRANSFERS")
+			}
 		}
 	}
 }
@@ -62,7 +67,7 @@ extension ActivityVC: UITableViewDelegate, UITableViewDataSource {
 
 extension ActivityVC: UICollectionViewDelegate, UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return myRecentContacts.count
+		return myTransfers.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -103,7 +103,7 @@ class LoginVC: UIViewController {
 				return
 			}
 			
-			guard let user = user else {return}
+//			guard let user = user else {return}
 			
 //			let userData = ["name": user.displayName, "email": user.email, "phone": user.phoneNumber]
 			let userData = UserDetails(tagName: "User1", email: "Nips&Toes23@gmail.com", phone: "3053238691")
